@@ -39,6 +39,8 @@ public class EmployeeController {
         return repository.save(newEmployee);
     }
 
+
+
     //== Single item ==//
 
     @GetMapping("/employees/{id}")
@@ -67,7 +69,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/employees/{id}")
-    void deleteEmployee(@PathVariable Long id) {
+    public void deleteEmployee(@PathVariable Long id) {
         repository.deleteById(id);
     }
 }
